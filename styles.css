@@ -1,0 +1,222 @@
+/* Importa il font Inter */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Start from the top */
+    height: 100vh;
+    margin: 0; /* Remove margin from body */
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* header styles */
+header {
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: black; /* Background color for header */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    margin: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #242424; /* Button hover effect */
+}
+
+/* main styles */
+main {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center main content */
+    margin-top: 70px; /* Space for the fixed header */
+    padding: 20px; /* Padding for the main content */
+    flex-grow: 1; /* Allow main to take available space */
+}
+
+/* slideshow styles */
+/* Slideshow container */
+.slideshow {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Full width for each slide */
+    transition: opacity 0.5s ease;
+}
+
+.slide img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Frecce di navigazione */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Rimuove lo sfondo */
+    color: white; /* Colore bianco per le frecce */
+    border: none;
+    padding: 0; /* Rimuove padding extra */
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 15px; /* Dimensione di base delle frecce */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Effetto transizione per hover */
+}
+
+/* Effetto hover: ingrandisci di 0.5 */
+.prev:hover, .next:hover {
+    transform: translateY(-50%) scale(1.5); /* Ingrandisci solo la freccia */
+}
+
+/* Posizionamento delle frecce fuori dalle immagini */
+.prev {
+    left: 10px; /* Spostato appena fuori dal bordo sinistro */
+}
+
+.next {
+    right: 10px; /* Spostato appena fuori dal bordo destro */
+}
+
+/* Correzione per rendere cliccabili le aree */
+.slideshow {
+    padding-left: 60px; /* Aggiunge spazio cliccabile a sinistra */
+    padding-right: 60px; /* Aggiunge spazio cliccabile a destra */
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin-top: 90px; /* Space above the personal section */
+}
+
+.profile-pic {
+    width: 400px; /* Size of the profile picture */
+    height: 400px; /* Ensure it's square */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 0%; /* Make it circular */
+    margin-bottom: 20px; /* Space below the profile picture */
+}
+
+.profile-description {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+} -->
+
+.contact-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.icon {
+    width: 20px; /* Icon size */
+    height: 20px;
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center; /* Center the footer */
+    margin-top: 20px;
+    position: relative; /* Relative positioning for the footer */
+}
+
+/* Easter Egg Button */
+.easter-egg {
+    position: absolute; /* Relative to the page */
+    bottom: 20px; /* Positioned at the bottom */
+    right: 20px; /* Positioned at the right */
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.easter-egg:hover {
+    background-color: #242424; /* Button hover effect */
+}

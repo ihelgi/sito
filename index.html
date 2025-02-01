@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intonti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <a href="index.html" class="logo">intonti</a>
+            <div class="nav-buttons">
+                <a href="photos.html"><button>foto</button></a>
+                <a href="404.html"><button>video</button></a>
+            </div>
+        </header>
+        
+        <main>
+            <div class="slideshow">
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="assets/slide1.jpeg" alt="Slideshow Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/slide2.jpeg" alt="Slideshow Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/slide3.jpeg" alt="Slideshow Image 3">
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="assets/elia.jpeg" alt="Elia Hung Intonti" class="profile-pic">
+                <p class="profile-description">Elia Hung Intonti is an Italian <br> failed photographer based in Zurich </p>
+
+                <!-- Contact Button
+                <a href="mailto:eliahungintonti@gmail.com" class="contact-btn">CONTACT</a> -->
+
+                <!-- Social Media Links -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/eliaintonti/" target="_blank">
+                        <img src="assets/insta.png" alt="Instagram" class="icon">
+                    </a>
+                    <a href="https://my.flightradar24.com/iHelgi" target="_blank">
+                        <img src="assets/flight.png" alt="MyFlightRadar" class="icon">
+                    </a>
+                    <a href="https://letterboxd.com/ihelgi/" target="_blank">
+                        <img src="assets/lb.png" alt="Instagram" class="icon">
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <a href="snake/index.html">
+            <button class="easter-egg">.</button>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

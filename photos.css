@@ -1,0 +1,125 @@
+/* Importa il font Inter */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* Font grassetto per il corpo */
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Stack elements vertically */
+    height: 100vh;
+    margin: 0; /* Remove margin from body */
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* header styles */
+header {
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: black; /* Background color for header */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    margin: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 700; /* Font in grassetto per i pulsanti */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #242424; /* Button hover effect */
+}
+
+/* Sidebar */
+.main-content {
+    display: flex;
+    margin-top: 70px; /* Space for the fixed header */
+    padding: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    font-weight: 400; /* Font normale per voci non attive */
+    color: white;
+    text-decoration: none;
+    transition: font-weight 0.3s ease; /* Transizione morbida per il font */
+}
+
+.sidebar ul li a.active {
+    font-weight: 700; /* Font in grassetto per la voce attiva */
+}
+
+/* Galleria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}

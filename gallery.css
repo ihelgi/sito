@@ -1,4 +1,4 @@
-/* Importa il font Inter */
+/* font Inter */
 * {
     margin: 0;
     padding: 0;
@@ -7,32 +7,32 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-weight: 700; /* Font grassetto per il corpo */
+    font-weight: 700;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Stack elements vertically */
+    justify-content: flex-start;
     height: 100vh;
-    margin: 0; /* Remove margin from body */
+    margin: 0;
 }
 
 .container {
     width: 100%;
     max-width: 1920px;
-    height: 100%; /* Full height */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 /* header styles */
 header {
-    position: fixed; /* Keep the header fixed at the top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: black; /* Background color for header */
-    z-index: 1000; /* Ensure it stays above other content */
+    background: black;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ header {
     font-size: 36px;
     text-align: center;
     color: white;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     margin: 10px;
 }
 
@@ -57,43 +57,51 @@ header {
     background-color: black;
     color: white;
     font-size: 16px;
-    font-weight: 700; /* Font in grassetto per i pulsanti */
+    font-weight: 700;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
 }
 
 .nav-buttons button:hover {
-    background-color: #242424; /* Button hover effect */
+    background-color: #242424;
 }
 
 /* Galleria */
+/* Griglia con righe fisse */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonne dinamiche */
-    gap: 10px;
-    width: 100%;
-    height: 1080px;  /* Altezza fissa per la galleria */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali */
+    grid-template-rows: repeat(2, 500px); /* 2 righe alte 500px */
+    gap: 10px; /* Spaziatura tra le celle */
     padding: 20px;
+    justify-items: center; /* Centra le immagini orizzontalmente */
+    align-items: center; /* Centra le immagini verticalmente */
 }
 
+/* Imposta il contenitore per ogni immagine */
 .gallery-item {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100%; /* Altezza che si adatta alla galleria */
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Altezza della cella */
     overflow: hidden;
 }
 
+/* Gestisci le immagini */
 .gallery-item img {
-    width: 100%; /* La larghezza si adatta alla larghezza del contenitore */
-    height: 1080px; /* Altezza fissa per tutte le immagini */
-    object-fit: contain; /* Mantiene l'immagine visibile senza tagliarla */
+    width: 100%; /* Adatta la larghezza dell'immagine alla cella */
+    height: 100%; /* Altezza fissa */
+    object-fit: cover; /* Riempi lo spazio senza deformare l'immagine */
 }
 
-.gallery-item p {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
+/* Seleziona le immagini orizzontali e allargale su 2 colonne */
+.gallery-item.horizontal {
+    grid-column: span 2;
+}
+
+/* Seleziona le immagini verticali e allargale su 2 righe */
+.gallery-item.vertical {
+    grid-row: span 2;
 }

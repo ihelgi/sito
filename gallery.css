@@ -70,7 +70,7 @@ header {
 /* Galleria */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Colonne dinamiche */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonne dinamiche */
     gap: 10px;
     width: 100%;
     height: 1080px;  /* Altezza fissa per la galleria */
@@ -82,15 +82,14 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;  /* L'altezza si adatta alla galleria */
-    width: 100%;   /* Larghezza al 100% */
+    height: 100%; /* Altezza che si adatta alla galleria */
     overflow: hidden;
 }
 
 .gallery-item img {
-    width: auto;  /* Larghezza automatica per mantenere le proporzioni */
-    height: 1080px;  /* Altezza fissa per l'immagine */
-    object-fit: cover;  /* Mantiene le proporzioni senza distorsioni */
+    width: 100%; /* La larghezza si adatta alla larghezza del contenitore */
+    height: 1080px; /* Altezza fissa per tutte le immagini */
+    object-fit: contain; /* Mantiene l'immagine visibile senza tagliarla */
 }
 
 .gallery-item p {

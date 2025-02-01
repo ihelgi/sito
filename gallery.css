@@ -79,8 +79,10 @@ header {
 .gallery-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  /* Centra orizzontalmente */
+    justify-content: center;  /* Centra verticalmente */
     height: auto;
+    text-align: center;
 }
 
 .gallery-item img {
@@ -88,6 +90,7 @@ header {
     height: auto;
     object-fit: cover;
 }
+
 .gallery-item p {
     margin-top: 10px;
     font-size: 14px;

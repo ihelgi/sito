@@ -85,7 +85,7 @@ function draw() {
 
     // Draw the snake
     for (let i = 0; i < snake.length; i++) {
-        ctx.fillStyle = (i % 2 === 0) ? "#007BFF" : "#1C1C1C"; // Alternate colors for body segments
+        ctx.fillStyle = (i % 2 === 0) ? "#007BFF" : "#1C1C1C"; // Colore alternato per i segmenti del serpente
         ctx.fillRect(snake[i].x, snake[i].y, box, box);
         ctx.strokeStyle = "black"; // Snake outline
         ctx.strokeRect(snake[i].x, snake[i].y, box, box);

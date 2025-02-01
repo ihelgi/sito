@@ -12,6 +12,7 @@ body {
 #snakeGameCanvas {
     display: none; /* Hidden until the game starts */
     border: 1px solid black; /* Canvas border */
+    background-color: #50C878; /* Verde smeraldo per il prato */
 }
 
 #appleCounter, #personalRecord {
@@ -28,7 +29,7 @@ body {
 
 #restartButton {
     padding: 10px 20px;
-    background-color: #007BFF; /* Button color */
+    background-color: #9b111e; /* Button color */
     border: none;
     color: black;
     font-size: 18px;

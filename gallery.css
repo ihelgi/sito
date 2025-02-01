@@ -83,7 +83,7 @@ header {
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
+    height: 1080px;
     object-fit: cover;
 }
 
